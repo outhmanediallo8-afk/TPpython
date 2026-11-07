@@ -9,12 +9,13 @@ catalogue = {
 catalogue["P05"] = {"nom": "Bureau", "categorie": "Mobilier", "prix": 18000}
 
 # b) Augmenter de 5 % (arrondi à l'unité) le prix des produits Informatique
-for ref, produit in catalogue.items():
-    if produit["categorie"] == "Informatique":
-        produit["prix"] = round(produit["prix"] * 1.05)
+for  j in catalogue.values():
+    if j["categorie"] == "Informatique":
+        j["prix"] = round(j["prix"] * 1.05)
 
 # c) Supprimer le produit P04
-del catalogue["P04"]          # ou : catalogue.pop("P04")
+#del catalogue["P04"] 
+catalogue.pop("P04")
 
 # d) Afficher le catalogue sous forme de tableau aligné
 def afficher_catalogue(cat):
